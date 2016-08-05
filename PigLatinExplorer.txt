@@ -1,0 +1,28 @@
+package com.Day4;
+
+import java.util.Scanner;
+
+public class PigLatinExplorer {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter in a word and be amazed as it is Pig-Latinized?");
+		String userInput = sc.nextLine();
+		String lowerUserInput = userInput.toLowerCase();
+		StringBuilder modUserInput = new StringBuilder(lowerUserInput);
+		char charFirstLetter = modUserInput.charAt(0);
+
+		if (charFirstLetter == 'a' || charFirstLetter == 'A' || charFirstLetter == 'e' || charFirstLetter == 'E'
+				|| charFirstLetter == 'i' || charFirstLetter == 'I' || charFirstLetter == 'o' || charFirstLetter == 'O'
+				|| charFirstLetter == 'u' || charFirstLetter == 'U') {
+			System.out.print(modUserInput + "-yay");
+
+		} else if (charFirstLetter != 'a' && charFirstLetter != 'A' && charFirstLetter != 'e' && charFirstLetter != 'E'
+				&& charFirstLetter != 'i' && charFirstLetter != 'I' && charFirstLetter != 'o' && charFirstLetter != 'O'
+				&& charFirstLetter != 'u' && charFirstLetter != 'U') {
+			System.out.print(modUserInput.deleteCharAt(0) + "-" + charFirstLetter + "ay");
+		}
+	}
+}
