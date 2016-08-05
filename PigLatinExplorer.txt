@@ -14,14 +14,12 @@ public class PigLatinExplorer {
 		StringBuilder modUserInput = new StringBuilder(lowerUserInput);
 		char charFirstLetter = modUserInput.charAt(0);
 
-		if (charFirstLetter == 'a' || charFirstLetter == 'A' || charFirstLetter == 'e' || charFirstLetter == 'E'
-				|| charFirstLetter == 'i' || charFirstLetter == 'I' || charFirstLetter == 'o' || charFirstLetter == 'O'
-				|| charFirstLetter == 'u' || charFirstLetter == 'U') {
+		if (charFirstLetter == 'a' || charFirstLetter == 'e' || charFirstLetter == 'i' || charFirstLetter == 'o'
+				|| charFirstLetter == 'u') {
 			System.out.print(modUserInput + "-yay");
 
-		} else if (charFirstLetter != 'a' && charFirstLetter != 'A' && charFirstLetter != 'e' && charFirstLetter != 'E'
-				&& charFirstLetter != 'i' && charFirstLetter != 'I' && charFirstLetter != 'o' && charFirstLetter != 'O'
-				&& charFirstLetter != 'u' && charFirstLetter != 'U') {
+		} else if (charFirstLetter != 'a' && charFirstLetter != 'e' && charFirstLetter != 'i' && charFirstLetter != 'o'
+				&& charFirstLetter != 'u') {
 			System.out.print(modUserInput.deleteCharAt(0) + "-" + charFirstLetter + "ay");
 		}
 	}
